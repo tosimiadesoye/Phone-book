@@ -1,0 +1,104 @@
+<div>
+    <form (suubmit)="createContact()">
+        <input 
+          type="text"
+          name="firstname"
+          placeholder="Enter firstname"
+          [(ngModel)]="firstname"
+          required
+         >
+         <input 
+          type="text"
+          name="lastname"
+          placeholder="Enter lastname"
+          [(ngModel)]="lastname"
+          required
+         >
+         <input 
+          type="text"
+          name="company"
+          placeholder="Enter company"
+          [(ngModel)]="company"
+         >
+         <input 
+          type="number"
+          name="mobile"
+          placeholder="Enter mobile"
+          [ngModel]="mobile?.mobile"
+          required
+         >
+         <input 
+          type="number"
+          name="phone"
+          placeholder="Enter phone"
+          [ngModel]="mobile?.phone"
+         >
+         <input 
+          type="text"
+          name="email"
+          placeholder="Enter email"
+          [ngModel]="mobile?.email"
+         >
+         <input 
+          type="text"
+          name="address"
+          placeholder="Enter address"
+          [(ngModel)]="address"
+         >
+         <input 
+          type="text"
+          name="birthday"
+          placeholder="Enter birthday"
+          [(ngModel)]="birthday"
+         >
+         <input 
+          type="date"
+          name="date"
+          placeholder="Enter date"
+          [(ngModel)]="date"
+         >
+         <input 
+          type="text"
+          name="nickname"
+          placeholder="Enter nickname"
+          [(ngModel)]="nickname"
+         >
+         <input 
+          type="text"
+          name="socialProfile"
+          placeholder="Enter social profile"
+          [(ngModel)]="socialProfile"
+         >
+         <input 
+          type="text"
+          name="instantMessage"
+          placeholder="Enter instant message"
+          [(ngModel)]="instantMessage"
+         >
+         <input 
+          type="text"
+          name="notes"
+          placeholder="Enter notes"
+          [(ngModel)]="notes"
+         >
+         <input type="submit" value="create">
+    </form>
+    <div *ngFor="let contact of contacts; let i = index;">
+        <div>
+            <div>{{i+1}}</div>
+            <h2>{{contact.firstname}}</h2>
+            <h2>{{contact.lastname}}</h2>
+            <p>{{contact.company}}</p>
+            <p>{{contact.mobile.mobile}}</p>
+            <p>{{contact.mobile.phone}}</p>
+            <p>{{contact.mobile.email}}</p>
+            <p>{{contact.address}}</p>
+            <p>{{contact.birthday}}</p>
+            <p>{{contact.date}}</p>
+            <p>{{contact.nickname}}</p>
+            <p>{{contact.socialProfile}}</p>
+            <p>{{contact.instantMessage}}</p>
+            <p>{{contact.notes}}</p>
+        </div>
+    </div>
+</div>

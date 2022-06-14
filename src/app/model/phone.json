@@ -1,0 +1,18 @@
+{
+    "firstname":"",
+    "lastname":"",
+    "company":"",
+    "mobile":{
+        "mobile": "",
+        "phone": "" ,
+        "email":""    
+    },
+    "address": "",
+    "birthday": "",
+    "date":"",
+    "nickname":"",
+    "socialProfile": "",
+    "instantMessage": "",
+    "notes":""
+}    
+    
