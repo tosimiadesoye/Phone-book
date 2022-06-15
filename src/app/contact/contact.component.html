@@ -1,5 +1,5 @@
 <div>
-    <form (suubmit)="createContact()">
+    <form (submit)="createContact()">
         <input 
           type="text"
           name="firstname"
@@ -46,7 +46,7 @@
           [(ngModel)]="address"
          >
          <input 
-          type="text"
+          type="date"
           name="birthday"
           placeholder="Enter birthday"
           [(ngModel)]="birthday"
@@ -86,19 +86,19 @@
     <div *ngFor="let contact of contacts; let i = index;">
         <div>
             <div>{{i+1}}</div>
-            <h2>{{contact.firstname}}</h2>
-            <h2>{{contact.lastname}}</h2>
-            <p>{{contact.company}}</p>
-            <p>{{contact.mobile.mobile}}</p>
-            <p>{{contact.mobile.phone}}</p>
-            <p>{{contact.mobile.email}}</p>
-            <p>{{contact.address}}</p>
-            <p>{{contact.birthday}}</p>
-            <p>{{contact.date}}</p>
-            <p>{{contact.nickname}}</p>
-            <p>{{contact.socialProfile}}</p>
-            <p>{{contact.instantMessage}}</p>
-            <p>{{contact.notes}}</p>
+            <h2>firstname: {{contact.firstname}}</h2>
+            <h2>lastname: {{contact.lastname}}</h2>
+            <p>company: {{contact.company}}</p>
+            <p>mobile: {{contact.mobile?.mobile}}</p>
+            <p>phone: {{contact.mobile?.phone}}</p>
+            <p>email: {{contact.mobile?.email}}</p>
+            <p>address: {{contact.address}}</p>
+            <p>birthday: {{contact.birthday}}</p>
+            <p>date: {{contact.date}}</p>
+            <p>nickname: {{contact.nickname}}</p>
+            <p>socila profile: {{contact.socialProfile}}</p>
+            <p>instant message: {{contact.instantMessage}}</p>
+            <p>notes: {{contact.notes}}</p>
         </div>
     </div>
 </div>

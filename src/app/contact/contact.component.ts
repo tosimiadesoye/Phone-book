@@ -13,13 +13,13 @@ export class ContactComponent implements OnInit {
   lastname!: string;
   company!: string;
   mobile!: {
-        mobile: number;
-        phone: number;
+        mobile: any;
+        phone: any;
         email: string;
     };
   address!: string;
   birthday!: string;
-  date!: Date;
+  date!: any;
   nickname!: string;
   socialProfile!: string;
   instantMessage!: string;
@@ -47,6 +47,7 @@ export class ContactComponent implements OnInit {
         notes:"I love you!"
     }    
     ]
+// console.log(sessionStorage.setItem("contact", JSON.stringify(this.contacts)))
   }
 
   createContact(){
@@ -67,10 +68,15 @@ export class ContactComponent implements OnInit {
     this.firstname = "";
     this.lastname = "";
     this.company = "";
-    this.mobile;
+    this.mobile = {
+      mobile: null,
+      phone: null,
+      email: ""
+
+    }
     this.address = "";
     this.birthday = "";
-    this.date;
+    this.date = null;
     this.nickname = "";
     this.socialProfile = "";
     this.instantMessage = "";
